@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Analyser App</title>
+</head>
+<body>
+    <center>
+        <h1>Welcome to Text Analyser App</h1>
+        <h2>Enter Your Text String Here:</h2>
+        <form action="/analyze" method="post"> {% csrf_token %}
+
+            <textarea name="text" style="
+                      width:80vw; height:25vh;
+                      padding: 1.5vw; outline:none;
+                      font-size:1.5rem;  border-radius:30px;"></textarea>
+            <br>
+            <div class="select" style="margin: 1%;">
+                <input type="checkbox" name="removePunc">
+                <label>Remove Punctuation</label>
+
+                <input type="checkbox" name="capitalize">
+                <label>UPPERCASE</label>
+
+                <input type="checkbox" name="newLineRemover">
+                <label>Remove NewLine</label>
+
+                <input type="checkbox" name="charCount">
+                <label>Count Character</label>
+
+                <input type="checkbox" name="spaceRemove">
+                <label>Extra Space Remover</label>
+            </div>
+            <br>
+            <button type="submit" style="
+                    margin: 1%; border-radius: 10px;
+                    width: 20vh; height: 5vh;
+                    font-size: 1rem;">Analyse Test</button>
+        </form>
+    </center>
+</body>
+</html>
