@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Analyser App</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <nav id="background" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TextUtils</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+        <h1 class="heading">Welcome to Text Analyser App</h1>
+        <h2 class="heading">Enter Your Text String Here:</h2>
+        <form action="/analyze" method="post"> {% csrf_token %}
+
+            <textarea name="text" style="
+                      width:80vw; height:25vh;
+                      padding: 1.5vw; outline:none;
+                      font-size:1.5rem;  border-radius:30px; margin-top: 10px;"></textarea>
+            <br>
+            <div class="select" style="
+            margin: 1%;">
+                <input type="checkbox" name="removePunc">
+                <label>Remove Punctuation</label>
+
+                <input type="checkbox" name="capitalize">
+                <label>UPPERCASE</label>
+
+                <input type="checkbox" name="newLineRemover">
+                <label>Remove NewLine</label>
+
+                <input type="checkbox" name="charCount">
+                <label>Count Character</label>
+
+                <input type="checkbox" name="spaceRemove">
+                <label>Extra Space Remover</label>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <button class="analyse-btn" type="submit">Analyse Test</button>
+            </div>
+        </form>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+body
+{
+    background: url(https://images.pexels.com/photos/207700/pexels-photo-207700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background-size: cover;
+    color: azure;
+    height: 100vh;
+
+}
+.heading{
+    text-align: center;
+    margin-top: 20px;
+}
+label
+{
+    margin-right: 10px;
+}
+label:hover
+{
+    color: aliceblue;
+    background-color: gray;
+    border-radius: 4px;
+}
+.select
+{
+    text-align: center;
+}
+.analyse-btn
+{
+    margin: 1%;
+    border-radius: 10px;
+    width: 20vh;
+    height: 5vh;
+    font-size: 1rem;
+}
+.analyse-btn:hover
+{
+    color: white;
+    background-color: gray;
+}
